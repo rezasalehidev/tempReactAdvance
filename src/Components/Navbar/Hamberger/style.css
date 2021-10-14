@@ -1,0 +1,63 @@
+.nav__checkbox{
+    display: none;
+}
+.nav__label{
+    width: 4rem;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav__label span:nth-child(1){
+    width: 80%;
+    background-color: rgb(47, 135, 170);
+    display: block;
+    height: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+.nav__label span:nth-child(2){
+    width: 100%;
+    background-color: rgb(47, 135, 170);
+    display: block;
+    height: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+.nav__label span:nth-child(3){
+    width: 60%;
+    background-color: rgb(47, 135, 170);
+    display: block;
+    height: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+.nav__label span{
+    transition: all 0.5s ease-in-out;
+}
+#burgermenu:checked ~ .nav__label span:nth-child(1){
+    transform: rotate(45deg) translate(17px, 4px);;
+    width: 100%;
+}
+#burgermenu:checked ~ .nav__label span:nth-child(2){
+    transform: rotate(-45deg) translate(2px, 11px);
+}
+#burgermenu:checked ~ .nav__label span:nth-child(3){
+    /* transform: rotate(45deg) translate(4px, 1px); */
+    display: none;
+}
+
+@keyframes colorchange {
+        0%{      
+            background-color: linear-gradient(45deg, blue, red); 
+        }
+        50%{      
+            background-color: linear-gradient(45deg, green, rgb(231, 165, 165)); 
+        }
+        100%{      
+            background-color: linear-gradient(45deg, rgb(140, 243, 140), rgb(65, 155, 208)); 
+        }
+}
+
+@media only screen and (min-width : 768px){
+    .nav__label{
+        display: none;
+    }
+}

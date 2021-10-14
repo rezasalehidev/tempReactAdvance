@@ -8,8 +8,23 @@
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
   <style>
+    @font-face {
+  font-family: 'Vazir';
+  src: url('./fonts/eot/Vazir-Thin.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/ttf/Vazir-Medium.ttf') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/woff2/Vazir-Thin.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/woff/Vazir-Thin.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./fonts/ttf/Vazir-Thin.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
     *{
       direction: rtl;
+      font-family: 'Vazir';
+    }
+    html{
+      font-size: 62.5%;
+    }
+    input,button{
+      font-family: 'Vazir';
     }
   </style>
   <title>React Project</title>

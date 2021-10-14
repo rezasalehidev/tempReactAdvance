@@ -1,13 +1,14 @@
 .search{
-    width: 50px;
-    border: 3px solid rgb(40, 139, 126);
+    width: 5rem;
+    border: 0.3rem solid rgb(40, 139, 126);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
-    border-radius: 50px;
+    height: 4rem;
+    border-radius: 4rem;
     position: relative;
     transition: all 0.5s cubic-bezier(0,-1.24,.57,1.75);
+    max-width: 200px;
 }
 .search__form{
     display: flex;
@@ -27,22 +28,26 @@
 }
 .search__icon{
     cursor: pointer;
-    padding: 5px;
+    padding: 0.5rem;
     border-radius: 50%;
-    border: 3px solid rgb(40, 139, 126);
+    border: 0.3rem solid rgb(40, 139, 126);
+    display: flex;
 }
 .search:focus-within{
-    width: 230px;
+    width: 23rem;
 }
 .search:focus-within .search__icon{
     margin-right: auto;
-    margin-left: 2px;
+    margin-left: 0.2rem;
     position: absolute;
-    left: 5px;
-    top: 7px;
+    left: 0.5rem;
+    top: 0.7rem;
     display: flex;
 }
 
 .search:focus-within .search__input{
     display: block;
+}
+.search__navbar{
+    width: 20rem;
 }

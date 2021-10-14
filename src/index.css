@@ -1,5 +1,56 @@
-.Wrapper{
+
+.Navbar{
     width: 90vw;
     margin: 0 auto;
-    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+@media screen and (min-width:576px) {
+    .Navbar{
+        width: 540px;
+    }
+}
+@media screen and (min-width:768px) {
+    .Navbar{
+        width: 720px;
+    }
+}
+@media screen and (min-width:992px) {
+    .Navbar{
+        width: 960px;
+    }
+    .search{
+        order: 1;
+    }
+    .logo-image{
+        order: 2;
+    }
+}
+@media screen and (min-width:1200px) {
+    .Navbar{
+        width: 1140px;
+    }
+}
+@media screen and (min-width:1400px) {
+    .Navbar{
+        width: 1320px;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .Container{
+        position: sticky;
+        top: 0;
+        box-shadow: 0 0 4px 1px #ddd;
+    }
+    .search__navbar{
+        order: 1 !important;
+        width: auto;
+    }
+    .logo-image{
+        order: 2 !important;
+    }
 }
