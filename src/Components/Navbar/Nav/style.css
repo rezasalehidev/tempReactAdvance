@@ -1,0 +1,40 @@
+.nav__lists{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font-size: 1.8rem;
+    list-style: none;
+    text-decoration: none;
+}
+.nav__list{
+    cursor: pointer;
+    position: relative;
+}
+.nav__link{
+    position: relative;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.nav__link::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 3px;
+    border-radius: 0.5rem;
+    background-color: #0d62da;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+}
+.nav__link:hover::after{
+    width: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .nav__lists{
+        display: none;
+    }
+}
