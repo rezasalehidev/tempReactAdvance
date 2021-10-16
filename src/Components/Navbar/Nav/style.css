@@ -1,3 +1,7 @@
+a{
+    text-decoration: none;
+    font-size: 1.5rem;
+}
 .nav__lists{
     list-style: none;
     padding: 0;
@@ -10,11 +14,16 @@
 .nav__list{
     cursor: pointer;
     position: relative;
+    display: block;
+}
+.nav__list:hover > ul.nav_sublists1{
+    transform: scale(1);
 }
 .nav__link{
     position: relative;
     text-decoration: none;
     padding: 1rem;
+    display: block;
 }
 
 .nav__link::after{
@@ -37,4 +46,51 @@
     .nav__lists{
         display: none;
     }
+}
+
+/* styles sub lists */
+.nav_sublists1,.nav_sublists2{
+    width: 20rem;
+    background-color: #fff;
+    color: rgb(15, 14, 14);
+    position: absolute;
+    list-style:none;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 5px ;
+    border-top: 0.3rem solid salmon;
+    border-radius: 10px;
+    transform-origin: top right;
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+.nav_sublists1 a{
+    display: flex;
+    align-items: center;
+}
+.nav_sublists2 a{
+    display: flex; 
+    align-items: center;
+}
+/* styles sub list */
+.nav_sublist{
+    position: relative; 
+}
+.nav_sublist a{
+    display: flex;
+    justify-content: space-between;
+}
+li{
+    transition: all 0.3s ease;
+}
+.nav_sublist:hover > ul.nav_sublists2{
+    transform: scale(1);
+}
+.nav_sublists1 li:hover{
+    background-color: rgb(243, 233, 233);
+    padding-right: 10px;
+}
+.nav_sublists2{
+top: 0;
+right: 100%;
 }
