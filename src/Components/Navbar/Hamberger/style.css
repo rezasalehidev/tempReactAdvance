@@ -33,7 +33,7 @@
     transition: all 0.5s ease-in-out;
 }
 #burgermenu:checked ~ .nav__label span:nth-child(1){
-    transform: rotate(45deg) translate(17px, 4px);;
+    transform: rotate(45deg) translate(17px, 4px);
     width: 100%;
 }
 #burgermenu:checked ~ .nav__label span:nth-child(2){
@@ -56,7 +56,34 @@
         }
 }
 
-@media only screen and (min-width : 768px){
+@media only screen and (max-width : 768px){
+    .nav__label{
+        display: block;
+    }
+
+    #burgermenu ~ .nav__lists_mobile{
+        position: absolute;
+        right: -100%;
+        transition: all 0.3s ease;
+    }
+    #burgermenu:checked ~ .nav__lists_mobile{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 9.2rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: cadetblue;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
+@media only screen and (min-width : 769px){
     .nav__label{
         display: none;
     }
